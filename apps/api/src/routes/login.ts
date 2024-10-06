@@ -26,7 +26,7 @@ export const login = new Elysia()
 					1000 * 60 * 5 ||
 				authCodeSent.content !== code
 			) {
-				return error(401)
+				return error(401, 'Unauthorized')
 			}
 
 			await prisma.authCode.delete({
@@ -61,6 +61,10 @@ export const login = new Elysia()
 				},
 				{ description: 'Expected email and auth code' },
 			),
+			response: {
+				401: t.Literal('Unauthorized'),
+				201: t.Void(),
+			},
 			detail: {
 				summary: 'Authenticates an user',
 				tags: ['auth'],

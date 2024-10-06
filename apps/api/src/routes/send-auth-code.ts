@@ -40,5 +40,8 @@ export const sendAuthCode = new Elysia().post(
 			summary: 'Sends auth code to user',
 			tags: ['auth'],
 		},
+		response: {
+			201: t.Void(),
+		}
 	},
 )
