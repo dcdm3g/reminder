@@ -1,12 +1,10 @@
 export function createAuthCode() {
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
-  let code = ''
-  let counter = 6
+	const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+	let code = ''
 
-  while (counter > 0) {
-    code += chars[Math.round(Math.random() * (chars.length - 1))]
-    counter--
-  }
+	while (code.length < 6) {
+		code += chars[Math.round(Math.random() * (chars.length - 1))]
+	}
 
-  return code
+	return code
 }
