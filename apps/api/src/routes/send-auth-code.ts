@@ -42,6 +42,6 @@ export const sendAuthCode = new Elysia().post(
 		},
 		response: {
 			201: t.Void(),
-		}
+		},
 	},
 )

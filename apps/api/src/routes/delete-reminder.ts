@@ -37,8 +37,8 @@ export const deleteReminder = new Elysia()
 				204: t.Void(),
 			},
 			detail: {
-        summary: 'Deletes a reminder',
-        tags: ['reminders'],
-      }
+				summary: 'Deletes a reminder',
+				tags: ['reminders'],
+			},
 		},
 	)
