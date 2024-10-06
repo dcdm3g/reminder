@@ -9,7 +9,7 @@ export default function Home() {
 				alignItems: 'center',
 			}}
 		>
-			<Text style={{ fontSize: 32, fontWeight: 'bold' }}>Hello Reminder</Text>
+			<Text className="text-3xl font-bold">Hello Reminder</Text>
 		</View>
 	)
 }
