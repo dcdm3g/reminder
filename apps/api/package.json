@@ -1,17 +1,18 @@
 {
-	"name": "@reminder/api",
-	"version": "1.0.0",
-	"scripts": {
-		"dev": "bun --watch src/server.ts",
-		"build": "bun build src/server.ts --target bun --outdir ./dist",
-		"start": "NODE_ENV=production bun dist/server.js",
-		"test": "bun test"
-	},
-	"dependencies": {
-		"elysia": "latest"
-	},
-	"devDependencies": {
-		"bun-types": "latest"
-	},
-	"module": "src/index.js"
+  "name": "@reminder/api",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "bun --watch src/server.ts",
+    "build": "bun build src/server.ts --target bun --outdir ./dist",
+    "start": "NODE_ENV=production bun dist/server.js",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@prisma/client": "5.20.0",
+    "elysia": "latest"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "module": "src/index.js"
 }
