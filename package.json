@@ -1,11 +1,14 @@
 {
-	"name": "reminder",
-	"workspaces": ["apps/*"],
-	"scripts": {
-		"check": "biome check",
-		"check:fix": "biome check --write"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "1.9.3"
-	}
+  "name": "reminder",
+  "devDependencies": {
+    "@biomejs/biome": "1.9.3"
+  },
+  "scripts": {
+    "check": "biome check",
+    "check:fix": "biome check --write"
+  },
+  "workspaces": ["apps/*"],
+  "dependencies": {
+    "@elysiajs/eden": "^1.1.3"
+  }
 }

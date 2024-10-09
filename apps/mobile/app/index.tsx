@@ -1,15 +1,17 @@
-import { Text, View } from 'react-native'
+import { useQuery } from '@/hooks/use-query'
+import { eden } from '@/lib/eden'
+import { Text } from 'react-native'
 
 export default function Home() {
-	return (
-		<View
-			style={{
-				flex: 1,
-				justifyContent: 'center',
-				alignItems: 'center',
-			}}
-		>
-			<Text className="text-3xl font-bold">Hello Reminder</Text>
-		</View>
-	)
+	const { loading, data, error } = useQuery(() => eden.reminders.get())
+
+	if (loading) {
+		return <Text>Loading...</Text>
+	}
+
+	if (error) {
+		return <Text>Error: {JSON.stringify(error, null, 2)}</Text>
+	}
+
+	return <Text>{JSON.stringify(data.reminders, null, 2)}</Text>
 }
